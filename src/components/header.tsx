@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Search, ShoppingBag } from 'lucide-react'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 export default function Header() {
   return (
@@ -27,13 +27,13 @@ export default function Header() {
         <div className="w-px h-4 bg-zinc-700" />
         <Link href="/" className="flex items-center gap-2 hover:underline">
           <span className="text-sm">Account</span>
-          <Image
+          {/* <Image
             src="https://github.com/eulaludmila.png"
             className="h-6 w-6 rounded-full"
             width={24}
             height={24}
             alt="Profile"
-          />
+          /> */}
         </Link>
       </div>
     </div>
