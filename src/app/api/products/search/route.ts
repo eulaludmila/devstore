@@ -3,7 +3,7 @@ import data from '../data.json'
 import { NextRequest } from 'next/server'
 
 export async function GET(request: NextRequest) {
-  await new Promise((resolve) => setTimeout(resolve, 1500))
+  await new Promise((resolve) => setTimeout(resolve, 3000))
 
   const { searchParams } = request.nextUrl
   // parse valida se é string e retorna um erro
