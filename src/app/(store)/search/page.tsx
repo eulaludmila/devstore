@@ -1,12 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { TextResultSearch } from './text-result-search'
 
 export default async function Search() {
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-small">
-        Resultados para: <span className="font-semibold">moletom</span>
-      </p>
+      <TextResultSearch />
       <div className="grid grid-cols-3 gap-6">
         <Link
           href={`/product/moletom-never-stop-learning`}
