@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { TextResultSearch } from './text-result-search'
+// import { TextResultSearch } from './text-result-search'
 import { redirect } from 'next/navigation'
 import { api } from '@/data/api'
 import { Product } from '@/data/types/product'
