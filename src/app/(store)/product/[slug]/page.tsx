@@ -3,7 +3,6 @@ import { api } from '@/data/api'
 import { Product } from '@/data/types/product'
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { Suspense } from 'react'
 
 interface ProductProps {
   params: {
@@ -58,7 +57,7 @@ export async function generateStaticParams() {
   })
 }
 
-export async function ProductPageComponent({ params }: ProductProps) {
+export default async function ProductPage({ params }: ProductProps) {
   const product = await getProduct(params.slug)
 
   return (
@@ -133,13 +132,5 @@ export async function ProductPageComponent({ params }: ProductProps) {
         <AddToCartButton productId={product.id} />
       </div>
     </div>
-  )
-}
-
-export default function ProductPage({ params }: ProductProps) {
-  return (
-    <Suspense>
-      <ProductPageComponent params={params} />
-    </Suspense>
   )
 }
